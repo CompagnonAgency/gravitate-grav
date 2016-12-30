@@ -1,4 +1,4 @@
-# gravitate-grav
+# %siteName%
 
 > Polarbit's Grav generator for Gravitate.
 
