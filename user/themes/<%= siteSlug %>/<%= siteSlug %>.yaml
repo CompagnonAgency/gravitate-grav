@@ -7,4 +7,4 @@ streams:
     theme:
       type: ReadOnlyStream
       paths:
-        - user/themes/personaltrainersam
+        - user/themes/<%= siteSlug %>

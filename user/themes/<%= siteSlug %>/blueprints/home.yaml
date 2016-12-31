@@ -12,7 +12,7 @@ form:
       fields:
         home:
           type: tab
-          title: Aanpassingen
+          title: Configuration
 
           fields:
             first_section:
@@ -21,9 +21,9 @@ form:
               underline: true
 
               fields:
-                header.slogan:
+                header.welcome:
                   type: text
-                  label: Slogan
+                  label: Welcome
                   style: vertical
                   validate:
                     type: string

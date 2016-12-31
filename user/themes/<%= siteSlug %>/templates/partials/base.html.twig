@@ -11,11 +11,6 @@
       </title>
       {% include 'partials/metadata.html.twig' %}
       <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-      <meta property="og:url" content="{{ base_url_absolute }}{{ page.url }}" />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content="{{page.title}}" />
-      <meta property="fb:app_id" content="731878800318903" />
-      <meta property="og:image" content="{{ url('theme://images/webbanner.png', true) }}" />
       <link rel="icon" type="image/ico" href="{{ url('theme://images/favicon.ico', true) }}" />
       <link rel="canonical" href="{{ page.url(true, true) }}" />
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -40,7 +35,7 @@
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-78698997-8', 'auto');
+      ga('create', '<%= siteGoogleAnalytics %>', 'auto');
       ga('send', 'pageview');
     </script>
   </body>

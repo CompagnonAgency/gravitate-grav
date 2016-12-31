@@ -1,50 +1,40 @@
 # <%= siteName %>
 
-> Polarbit's Grav generator for Gravitate.
+> <%= siteDescription %>
 
 ## Usage
 
-Install dependencies
+Watch for SCSS and JS changes:
 
-```
-$ npm install
-```
-
-Compile Javascript and SCSS.
-
-```
-gulp
-```
+    $ gulp
 
 Preferably use MAMP or any other Apache server.
 
-## Sync with remote site
+## Deployment & synchronization
 
-    Manually download the /user folder
+#### grav-sync
 
-## Deployment
+Sync remote/local environment by pulling the `/user` folder from your server.
+Make sure you fill in `.grav-sync.yml`.
 
-Make sure you created a `phploy.ini` and make sure both Grav and it's
-dependencies are up to date. See `phploy.ini.sample` for an example.
+    $ rake
 
-**Always pull the remote site first before you deploy**
+#### phploy
 
-    phploy -s production
+Incremental Git (S)FTP deployment tool. Having [PHPloy](https://github.com/banago/PHPloy) installed locally is necessary.
 
-## Updating and installing dependencies
+    $ phploy -s [name]
 
-#### Install the plugin and theme dependencies
-
-    bin/grav install
+## GPM
 
 #### Update Grav
 
-    bin/gpm selfupgrade
+    $ bin/gpm selfupgrade
 
 #### Update plugins and themes
 
-    bin/gpm update
+    $ bin/gpm update
 
 ## License
 
-(c) Polarbit.co
+(c) <%= siteName %>

@@ -1,7 +1,7 @@
 {
   "name": "<%= siteSlug %>",
-  "version": "2.0.0",
-  "description": "Personal trainer.",
+  "version": "1.0.0",
+  "description": "<%= siteDescription %>",
   "main": "gulpfile.js",
   "directories": {
     "doc": "doc",
@@ -10,7 +10,7 @@
   "scripts": {
     "start": "gulp"
   },
-  "author": "Polarbit",
+  "author": "<%= siteAuthor %>",
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.8.0",

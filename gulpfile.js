@@ -18,7 +18,7 @@ var rename = require("gulp-rename");
 // Configuration
 // -----------------------------------------------------------------------------
 
-var userPath = './user/themes/personaltrainersam/';
+var userPath = './user/themes/<%= siteSlug %>/';
 var sassInput = userPath + 'scss/**/*.scss';
 var sassOutput = userPath + 'css';
 var sassOptions = { outputStyle: 'compressed' };
