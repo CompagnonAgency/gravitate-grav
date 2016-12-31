@@ -1,4 +1,4 @@
-title: '<%= siteName %>'
+title: "<%= siteName %>"
 author:
   name: 'Sam Devinck'
   email: tiny@personaltrainersam.be
