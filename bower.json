@@ -12,7 +12,7 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "user/themes/<%= siteSlug %>/js/components",
+    "user/themes/<%= siteSlug %>/js/components"
   ],
   "dependencies": {
     "jquery": "^3.1.1"
