@@ -1,5 +1,5 @@
 {
-  "name": "%siteSlug%",
+  "name": "<%= siteSlug %>",
   "version": "2.0.0",
   "description": "Personal trainer.",
   "main": "gulpfile.js",

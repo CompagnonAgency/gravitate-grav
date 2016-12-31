@@ -1,4 +1,4 @@
-# %siteName%
+# <%= siteName %>
 
 > Polarbit's Grav generator for Gravitate.
 
