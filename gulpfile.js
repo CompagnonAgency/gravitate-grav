@@ -6,7 +6,6 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var browserify = require('browserify');
-var uglify = require('gulp-uglifyjs');
 var watchify = require('watchify');
 var source = require('vinyl-source-stream');
 var notify = require('gulp-notify');
@@ -43,7 +42,6 @@ gulp.task('browserify', function () {
       console.error(err.message);
     })
     .pipe(source(javascriptOutput))
-    .pipe(streamify(uglify()))
     .pipe(gulp.dest(output))
     .pipe(notify('Built source!'));
 });

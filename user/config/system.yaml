@@ -17,6 +17,8 @@ cache:
     method: file
   driver: auto
   prefix: 'g'
+  gzip: true
+  allow_webserver_gzip: true
 
 twig:
   cache: true

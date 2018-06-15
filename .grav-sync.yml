@@ -1,6 +1,0 @@
-ssh:
-  username: "example"
-  host: "example.com"
-  port: "4000"
-remote:
-  path: "/public_html"
