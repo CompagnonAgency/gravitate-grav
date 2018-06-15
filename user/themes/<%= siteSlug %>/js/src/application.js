@@ -1,3 +1,2 @@
-import $ from 'jquery';
-
-console.log('hi');
+// Javascript (ES6 using Babel)
+// `import` and `require` is supported
