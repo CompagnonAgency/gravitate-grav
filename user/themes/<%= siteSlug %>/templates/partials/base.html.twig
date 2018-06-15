@@ -25,7 +25,6 @@
       {% block content %}{% endblock %}
     {% endblock %}
     {% block javascripts %}
-      {% do assets.addJs('theme://js/components/jquery/dist/jquery.min.js') %}
       {% do assets.addJs('theme://js/dist/application.min.js') %}
     {% endblock %}
     {{ assets.js() }}

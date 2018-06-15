@@ -71,7 +71,7 @@ gulp.task('watch', function() {
     gulp.task('browserify')();
   });
 
-  var cssWatcher = gulp.watch(javascriptInput);
+  var cssWatcher = gulp.watch(sassInput);
   cssWatcher.on('all', function(event, path, stats) {
     gulp.task('sass')();
   });
