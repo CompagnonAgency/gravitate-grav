@@ -6,7 +6,6 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var browserify = require('browserify');
-var uglify = require('gulp-uglifyjs');
 var watchify = require('watchify');
 var source = require('vinyl-source-stream');
 var notify = require('gulp-notify');
@@ -37,13 +36,12 @@ gulp.task('browserify', function () {
       entries: [javascriptMainFile],
       debug: true
     }))
-    .transform(babelify, {presets: ['es2016', 'stage-0']})
+    .transform(babelify, {presets: ['es2015', 'stage-0']})
     .bundle()
     .on('error', function(err) {
       console.error(err.message);
     })
     .pipe(source(javascriptOutput))
-    .pipe(streamify(uglify()))
     .pipe(gulp.dest(output))
     .pipe(notify('Built source!'));
 });
@@ -66,14 +64,22 @@ gulp.task('sass', function () {
 // -----------------------------------------------------------------------------
 
 gulp.task('watch', function() {
-  gulp.start('compile');
-  gulp.watch([javascriptInput], ['browserify']);
-  gulp.watch([sassInput], ['sass']);
+  gulp.task('compile')();
+
+  var jsWatcher = gulp.watch(javascriptInput);
+  jsWatcher.on('all', function(event, path, stats) {
+    gulp.task('browserify')();
+  });
+
+  var cssWatcher = gulp.watch(javascriptInput);
+  cssWatcher.on('all', function(event, path, stats) {
+    gulp.task('sass')();
+  });
 });
 
 // -----------------------------------------------------------------------------
 // Default task
 // -----------------------------------------------------------------------------
 
-gulp.task('compile', ['sass', 'browserify']);
-gulp.task('default', ['watch']);
+gulp.task('compile', gulp.parallel('sass', 'browserify'));
+gulp.task('default', gulp.parallel('watch'));
